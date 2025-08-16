@@ -159,7 +159,7 @@ def predict_url(url, model_path = r"C:\myworks\Phishing_Detect\notebooks\phishin
     # Explain
     reasons = explain_phishing(url)
 
-    verdict = "PHISHING ⚠️" if pred==1 else "LEGITIMATE ✅"
+    verdict = "LEGITIMATE ✅" if pred==1 else "PHISHING ⚠️"
 
     # return verdict, round(prob, 2), reasons
     return verdict, float(prob), reasons
