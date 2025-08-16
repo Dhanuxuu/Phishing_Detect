@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PhishGuard AI Chat</title>
+    <!-- <link rel="stylesheet" href="./static/style.css" /> -->
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='style.css')}}"
+    />
+  </head>
+  <body>
+    <div class="chat-container">
+      <!-- Header -->
+      <div class="chat-header">
+        <div class="header-left">
+          <span class="shield">🛡️</span>
+          <div>
+            <h1>PhishGuard AI</h1>
+            <p>Intelligent Threat Detection</p>
+          </div>
+        </div>
+        <div class="header-right">
+          <div class="online-dot"></div>
+          <span>Online</span>
+        </div>
+      </div>
+
+      <!-- Messages -->
+      <div class="chat-messages" id="chatMessages"></div>
+
+      <!-- Input Area -->
+      <!-- <div class="chat-input-container"> -->
+      <!-- <input
+          type="text"
+          id="chatInput"
+          placeholder="Paste URLs or ask about threats..."
+        /> -->
+    
+
+      <input type="text" id="url-input" placeholder="Enter URL..." />
+      <button id="send-btn" onclick="sendUrl()">Send</button>
+
+      <!-- <input type="text" id="urlInput" placeholder="Enter URL" />
+        <button onclick="sendUrl()">Check URL</button>
+
+        <button id="voiceBtn">🎙️</button>
+        <button id="sendBtn">Send</button> -->
+      <!-- </div> -->
+
+      <!-- Voice Overlay -->
+      <div class="voice-overlay" id="voiceOverlay" style="display: none">
+        <div class="voice-box">
+          <p>Listening...</p>
+          <button id="stopVoice">Stop</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- <script src="./static/script.js"></script> -->
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+  </body>
+</html>

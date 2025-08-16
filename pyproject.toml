@@ -1,0 +1,8 @@
+[project]
+name = "Phishing_Detect"
+version = "0.1.0"
+description = "Phishing url detection"
+authors = [
+    {name = "Hansani Dhanushika", email = "hansi77dhanu@gmail.com"}
+]
+requires-python = ">=3.9"
